@@ -22,16 +22,16 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         flex lg:flex-row flex-col">
           <div className="pt-4 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
             <Tag
-              year="2021"
-              category="SOFAS"
+              year="2023"
+              category="Кроссовки"
             />
             <Center
-              price="200"
+              price="100"
               title={inventory[2].name}
               link={`/product/${slugify(inventory[2].name)}`}
             />
             <Footer
-              designer="Jason Bourne"
+              designer="cross"
             />
           </div>
           <div className="flex flex-1 justify-center items-center relative">

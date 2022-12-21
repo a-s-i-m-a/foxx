@@ -10,7 +10,7 @@ const ListItem = ({ link, title, imageSrc, price }) =>  (
     lg:w-1/4
     p1 sm:p-2
   ">
-    <Link href={`${link}`}>
+    <Link legacyBehavior href={`${link}`}>
       <a aria-label={title}>
         <div className="h-72 flex justify-center items-center bg-light hover:bg-light-200">
           <div className="flex flex-column justify-center items-center">

@@ -141,7 +141,7 @@ const Checkout = ({ context }) => {
       >
         <div className="pt-10 pb-8">
           <h1 className="text-5xl font-light mb-6">Checkout</h1>
-          <Link href="/cart">
+          <Link  legacyBehavior href="/cart">
             <a aria-label="Cart">
               <div className="cursor-pointer flex  items-center">
                 <FaLongArrowAltLeft className="mr-2 text-gray-600" />

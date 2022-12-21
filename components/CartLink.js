@@ -17,7 +17,7 @@ function CartLink(props) {
       sm:top-53 right-24 desktop:right-flexiblemargin
       top-40 z-10">
         <div className="flex flex-1 justify-end pr-4 relative">
-          <Link href="/cart">
+          <Link legacyBehavior href="/cart">
             <a aria-label="Cart">
               <FaShoppingCart />
             </a>

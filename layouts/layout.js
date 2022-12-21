@@ -11,53 +11,66 @@ export default function Layout({ children, categories }) {
   return (
     <div>
       <nav>
-        <div className="flex justify-center">
+        <div className="flex align-middle justify-center">
           <div className="
             mobile:px-12 sm:flex-row sm:pt-12 sm:pb-6 desktop:px-0
-            px-4 pt-8 flex flex-col w-fw
+            px-4  flex flex-col w-fw items-center
           ">
-            <div className="mb-4 sm:mr-16 max-w-48 sm:max-w-none">
-              <Link href="/">
+            <div className="ml-16 sm:mr-16 max-w-48 sm:max-w-none">
+              <Link legacyBehavior href="/">
                 <a aria-label="Home">
-                  <img src="/logo.png" alt="logo" width="90" height="28" />
+                  <img src="/logo.png" alt="logo" width="45" height="45" />
                 </a>
               </Link>
             </div>
             <div className="flex flex-wrap mt-1">
-              <Link href="/">
+              <Link legacyBehavior href="/">
                 <a aria-label="Home">
                   <p className="
                     sm:mr-8 sm:mb-0
-                    mb-4 text-left text-smaller mr-4
+                    mb-4 text-left text-xl  mr-4
                   ">
-                  Home
+                    Главное
                   </p>
                 </a>
               </Link>
-              {
-                categories.map((category, index) => (
-                  <Link
-                    href={`/category/${slugify(category)}`}
-                    key={index}
-                  >
-                    <a aria-label={category}>
-                      <p className="
-                          sm:mr-8 sm:mb-0
-                          mb-4 text-left text-smaller mr-4
-                        ">
-                        {category.charAt(0).toUpperCase() + category.slice(1)}
-                      </p>
-                    </a>
-                  </Link>
-                ))
-              }
-              <Link href="/categories">
+              <Link legacyBehavior href="/category/new-arrivals">
+                <a aria-label="Home">
+                  <p className="
+                    sm:mr-8 sm:mb-0
+                    mb-4 text-left text-xl  mr-4
+                  ">
+                    Новое поступление
+                  </p>
+                </a>
+              </Link>
+              <Link legacyBehavior href="/category/cross">
+                <a aria-label="Home">
+                  <p className="
+                    sm:mr-8 sm:mb-0
+                    mb-4 text-left text-xl  mr-4
+                  ">
+                    Кроссовки
+                  </p>
+                </a>
+              </Link>
+              <Link legacyBehavior href="/category/clothes">
+                <a aria-label="Home">
+                  <p className="
+                    sm:mr-8 sm:mb-0
+                    mb-4 text-left text-xl  mr-4
+                  ">
+                    Одежда
+                  </p>
+                </a>
+              </Link>
+              <Link legacyBehavior href="/categories">
                 <a aria-label="All categories">
                   <p className="
                     sm:mr-8 sm:mb-0
-                    mb-4 text-left text-smaller mr-4 
+                    mb-4 text-left text-xl  mr-4
                   ">
-                  All
+                  Все товары
                   </p>
                 </a>
               </Link>
@@ -81,7 +94,7 @@ export default function Layout({ children, categories }) {
             sm:justify-end sm:m-0
             flex flex-1 mt-4
           ">
-            <Link href="/admin">
+            <Link legacyBehavior href="/admin">
               <a aria-label="Admin panel">
               <p className="text-sm font-semibold">Admins</p>
               </a>
