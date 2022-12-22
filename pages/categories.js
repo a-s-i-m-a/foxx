@@ -17,7 +17,7 @@ function Categories ({ categories = [] }) {
         <div className="
           pt-4 sm:pt-10 pb-8
         ">
-          <h1 className="text-5xl font-light">All categories</h1>
+          <h1 className="text-5xl font-light">Все товары</h1>
         </div>
         <div className="flex flex-col items-center">
           

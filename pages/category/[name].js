@@ -18,7 +18,7 @@ const Category = (props) => {
       <div className="flex flex-col items-center">
         <div className="max-w-fw flex flex-col w-full">
           <div className="pt-4 sm:pt-10 pb-8">
-            <h1 className="text-5xl font-light">{titleIfy(title)}</h1>
+            <h1 className="text-5xl font-light">{title}</h1>
           </div>
 
           <div>
@@ -57,11 +57,28 @@ export async function getStaticPaths () {
 
 export async function getStaticProps ({ params }) {
   const category = params.name.replace(/-/g," ")
+  const name = () => {
+    if(params.name === "new-arrivals") {
+      return  "Новое поступление"
+    }
+    if(params.name === "cross") {
+      return  "Обувь"
+    }
+    if(params.name === "clothes") {
+      return  "Одежда"
+    }
+    if(params.name === "clothes") {
+      return  "Одежда"
+    } else {
+      return
+    }
+
+  }
   const inventory = await inventoryForCategory(category)
   return {
     props: {
       inventory,
-      title: category
+      title: name()
     }
   }
 }

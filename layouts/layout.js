@@ -64,16 +64,6 @@ export default function Layout({ children, categories }) {
                   </p>
                 </a>
               </Link>
-              <Link legacyBehavior href="/categories">
-                <a aria-label="All categories">
-                  <p className="
-                    sm:mr-8 sm:mb-0
-                    mb-4 text-left text-xl  mr-4
-                  ">
-                  Все товары
-                  </p>
-                </a>
-              </Link>
             </div>
           </div>
         </div>
@@ -94,11 +84,6 @@ export default function Layout({ children, categories }) {
             sm:justify-end sm:m-0
             flex flex-1 mt-4
           ">
-            <Link legacyBehavior href="/admin">
-              <a aria-label="Admin panel">
-              <p className="text-sm font-semibold">Admins</p>
-              </a>
-            </Link>
           </div>
         </div>
       </footer>
